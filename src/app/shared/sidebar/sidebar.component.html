@@ -2,8 +2,9 @@
     <h3 class="text-light">Gifs-App</h3>
     <hr class="text-white">
     <div class="list-group list-reset">
-        <a href="#" class="list-group-item list-group-item-action">
-            Dashboard
+        <a *ngFor="let search of historial" href="#" class="list-group-item list-group-item-action"
+            (click)="onSearch(search)">
+            {{search | titlecase }}
         </a>
     </div>
 </div>
